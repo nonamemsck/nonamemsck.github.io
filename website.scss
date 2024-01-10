@@ -1,0 +1,296 @@
+$background: black;
+$fontcolor: white;
+$buttoncolor: #37B1F6;
+
+@font-face {
+    font-family: 'Myfont';
+    src: url('Arimo.ttf'); 
+}
+
+body {
+    background-color: $background;
+    color: $fontcolor;
+    font-family: 'Myfont';
+    margin: 0; 
+    height: 100%;
+    font-weight: bold;
+}
+
+.logo {
+    height: 30px;
+    width: 48px;
+}
+p{
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+header {
+    border-bottom: white 10px solid;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+}
+
+.text1 {
+    font-weight: lighter;
+    padding-left: 80px;
+    font-size: 48px;
+    grid-row: 2; 
+    grid-column: 1;
+}
+
+.text2 {
+    margin-top: 100px;
+    padding-left: 150px;
+    font-size: 64px;
+    grid-row: 1; 
+    grid-column: 2; 
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    margin-top: 150px;
+    font-weight: lighter;
+    margin-left: 80px;
+    display: flex;
+    background-color: $buttoncolor;
+    height: 35px;
+    width: 120px;
+    border-radius: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    grid-row: 2; 
+    grid-column: 1; 
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: darken($buttoncolor, 20%); 
+}
+
+
+.image {
+    margin-top: 90px;
+    grid-row: 2; 
+    grid-column: 2; 
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease;  
+}
+
+.image.slide-in {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+@media screen and (max-width: 480px) {
+
+
+    .logo {
+        height: 30px;
+        width: 48px;
+    }
+    p{
+        font-size: 28px;
+    }
+    
+    header {
+        border-bottom: white 10px solid;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .text1, .text2, .button, .image {
+        grid-row: auto;
+        grid-column: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .text1 {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        margin-right: 100%;
+        font-size: 24px;
+        font-weight: lighter;
+        grid-row: 2; 
+    }
+
+    .text2 {
+        text-align: right;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 100%;
+        font-size: 36px;
+        grid-row: 1; 
+    }
+
+    .button {
+        margin-left: 20px;
+        margin-right: 100%;
+        font-size: 18px;
+        height: 35px;
+        width: 60px;
+        grid-row: 3; 
+    }
+
+    .image {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: 60px;
+        margin-top: auto; 
+        grid-row: 4; 
+    }
+
+    .image img {
+        width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px){
+
+    .logo{
+        height: 40px;
+        width: 60px;
+
+    }
+    header{
+        padding-top: 10px;
+    }
+
+    .text1, .text2, .button, .image {
+        grid-row: auto;
+        grid-column: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .text1 {
+        width: 100%;
+        padding-left: 20px;
+        margin-right: 100%;
+        font-size: 30px;
+        font-weight: lighter;
+        grid-row: 3; 
+    }
+
+    .text2 {
+        width: 100%;
+        margin-left: 100%;
+        text-align: right;
+        display: block;
+        font-size: 52px;
+        grid-row: 2; 
+    }
+
+    .button {
+        margin-left: 20px;
+        margin-right: 100%;
+        font-size: 18px;
+        height: 35px;
+        width: 60px;
+        grid-row: 4; 
+    }
+
+    .image {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: 80px;
+        margin-top: auto; 
+        grid-row: 5; 
+        grid-column: span 4; 
+    }
+
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1024px){
+
+    .logo{
+        height: 40px;
+        width: 60px;
+
+    }
+    header{
+        padding-top: 10px;
+    }
+
+    .text1, .text2, .button, .image {
+        grid-row: auto;
+        grid-column: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .text1 {
+        margin-top: 90px;
+        width: 100%;
+        padding-left: 20px;
+        margin-right: 100%;
+        font-size: 30px;
+        font-weight: lighter;
+        grid-row: 2; 
+    }
+
+    .text2 {
+        margin-right: 20px;
+        text-align: right;
+        display: block;
+        font-size: 52px;
+        grid-row: 2; 
+    }
+
+    .button {
+        margin-left: 20px;
+        margin-right: 100%;
+        font-size: 18px;
+        height: 35px;
+        width: 60px;
+        grid-row: 4; 
+    }
+
+    .image {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: 80px;
+        margin-top: auto; 
+        grid-row: 5; 
+        grid-column: span 4; 
+    }
+
+
+}
