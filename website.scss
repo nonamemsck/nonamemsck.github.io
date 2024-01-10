@@ -120,6 +120,7 @@ a {
     border-radius: 10px; 
 }
 
+
 // Media query for screens with max-width of 480px
 @media screen and (max-width: 480px) {
     // Adjust styles for smaller screens
@@ -178,16 +179,16 @@ a {
     .image {
         position: fixed;
         bottom: 0;
-        left: 0;
-        margin-left: 60px;
-        margin-top: auto; 
-        grid-row: 4; 
+        right: 0;  
+        margin-left: 100px;  
+        margin-top: auto;
+        grid-row: 4;
     }
 
     .image img {
-        width: 80%; 
-        height: auto; 
-        border-radius: 10px; 
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
     }
 }
 

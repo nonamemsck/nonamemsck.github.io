@@ -151,13 +151,13 @@ a {
   .image {
     position: fixed;
     bottom: 0;
-    left: 0;
-    margin-left: 60px;
+    right: 0;
+    margin-left: 100px;
     margin-top: auto;
     grid-row: 4;
   }
   .image img {
-    width: 80%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
   }
