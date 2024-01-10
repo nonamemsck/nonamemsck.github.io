@@ -1,12 +1,15 @@
+// Define variables for colors and font
 $background: black;
 $fontcolor: white;
 $buttoncolor: #37B1F6;
 
+// Define custom font 'Myfont'
 @font-face {
     font-family: 'Myfont';
     src: url('Arimo.ttf'); 
 }
 
+// Styling for the body element
 body {
     background-color: $background;
     color: $fontcolor;
@@ -16,17 +19,21 @@ body {
     font-weight: bold;
 }
 
+// Styling for the logo
 .logo {
     height: 30px;
     width: 48px;
 }
-p{
+
+// Styling for paragraphs
+p {
     font-weight: bolder;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 38px;
 }
 
+// Styling for the header section
 header {
     border-bottom: white 10px solid;
     display: flex;
@@ -36,12 +43,14 @@ header {
     position: relative;
 }
 
+// Styling for the main content section
 section.body {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
 }
 
+// Styling for text1
 .text1 {
     font-weight: lighter;
     padding-left: 80px;
@@ -50,6 +59,7 @@ section.body {
     grid-column: 1;
 }
 
+// Styling for text2
 .text2 {
     margin-top: 100px;
     padding-left: 150px;
@@ -58,11 +68,13 @@ section.body {
     grid-column: 2; 
 }
 
-a{
+// Styling for anchor (link) elements
+a {
     color: white;
     text-decoration: none;
 }
 
+// Styling for the button
 .button {
     margin-top: 150px;
     font-weight: lighter;
@@ -80,11 +92,12 @@ a{
     transition: background-color 0.3s;
 }
 
+// Styling for button hover effect
 .button:hover {
     background-color: darken($buttoncolor, 20%); 
 }
 
-
+// Styling for the image container
 .image {
     margin-top: 90px;
     grid-row: 2; 
@@ -94,25 +107,27 @@ a{
     transition: opacity 0.5s ease, transform 0.5s ease;  
 }
 
+// Styling for the image slide-in effect
 .image.slide-in {
     opacity: 1; 
     transform: translateX(0); 
 }
 
+// Styling for image inside the container
 .image img {
     width: 100%; 
     height: auto; 
     border-radius: 10px; 
 }
 
+// Media query for screens with max-width of 480px
 @media screen and (max-width: 480px) {
-
-
+    // Adjust styles for smaller screens
     .logo {
         height: 30px;
         width: 48px;
     }
-    p{
+    p {
         font-size: 28px;
     }
     
@@ -130,7 +145,6 @@ a{
         padding: 0;
         margin: 0;
     }
-
 
     .text1 {
         width: 100%;
@@ -175,12 +189,12 @@ a{
         height: auto; 
         border-radius: 10px; 
     }
-
 }
 
-@media screen and (min-width: 481px) and (max-width: 800px){
-
-    .logo{
+// Media query for screens with min-width of 481px and max-width of 800px
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    // Adjust styles for medium-sized screens
+    .logo {
         height: 40px;
         width: 60px;
 
@@ -235,18 +249,21 @@ a{
 
 
 }
+// Media query for screens with min-width of 801px and max-width of 1024px
+@media screen and (min-width: 801px) and (max-width: 1024px) {
 
-@media screen and (min-width: 801px) and (max-width: 1024px){
-
-    .logo{
+    // Adjust styles for larger screens
+    .logo {
         height: 40px;
         width: 60px;
-
     }
-    header{
+
+    // Additional styling for the header in this media query
+    header {
         padding-top: 10px;
     }
 
+    // Reset grid and padding for text1, text2, button, and image
     .text1, .text2, .button, .image {
         grid-row: auto;
         grid-column: auto;
@@ -254,7 +271,7 @@ a{
         margin: 0;
     }
 
-
+    // Adjust styles for text1 in this media query
     .text1 {
         margin-top: 90px;
         width: 100%;
@@ -265,6 +282,7 @@ a{
         grid-row: 2; 
     }
 
+    // Adjust styles for text2 in this media query
     .text2 {
         margin-right: 20px;
         text-align: right;
@@ -273,6 +291,7 @@ a{
         grid-row: 2; 
     }
 
+    // Adjust styles for button in this media query
     .button {
         margin-left: 20px;
         margin-right: 100%;
@@ -282,6 +301,7 @@ a{
         grid-row: 4; 
     }
 
+    // Adjust styles for image in this media query
     .image {
         position: fixed;
         bottom: 0;
@@ -291,6 +311,4 @@ a{
         grid-row: 5; 
         grid-column: span 4; 
     }
-
-
 }
